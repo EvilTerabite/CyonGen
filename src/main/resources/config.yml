@@ -1,0 +1,388 @@
+## CyonGen Config
+################
+#  Cyon MC     #
+################
+
+#Equalization Timer
+#DEFAULT is 60 seconds
+#This is used to determine how often the plugin equalizes all players
+equalizeTime: 60
+
+#Player Messages
+prefix: "&7[&aCyonGen&7]&r "
+denyPlaceOnGen: "&cYou cannot place blocks on the generator."
+
+#Discord Log Channel
+discordLogChannel: admin-chat
+
+#URLs for /info
+ItemTPVideoURL: "Add URL in config"
+RatesInfoURL: "Add URL in config"
+
+
+#Cobblestone Generator Settings
+CobblestoneGenerationTime: 30
+GeneratorBedrockToEndStone: 60
+GeneratorCooldown: 5
+
+
+##Mine Shard drop rates (0.1 = 10%, 1 = 100%)
+##3 places required make sure its 0.00 and NOT 0.1 or 0.28472738 or any number > 1 or < 0
+##Ask Jeremy if you have ANY questions! Jeremy#2721
+CobbleDropRate: 0.03
+IronDropRate: 0.04
+CoalDropRate: 0.06
+RedstoneDropRate: 0.07
+LapisDropRate: 0.08
+GoldDropRate: 0.1
+DiamondDropRate: 0.1
+EmeraldDropRate: 0.1
+
+##Farm Shard Drop Rates
+WheatDropRate: 0.01
+CarrotDropRate: 0.01
+PotatoDropRate: 0.01
+PumpkinDropRate: 0.01
+MelonDropRate: 0.01
+BeetrootDropRate: 0.01
+SugarCaneDropRate: 0.01
+CactusDropRate: 0.01
+NetherWartDropRate: 0.01
+
+##Mob Shard Drop Rate
+RabbitDropRate: 0
+ChickenDropRate: 0
+PigDropRate: 0
+SheepDropRate: 0
+CowDropRate: 0
+SpiderDropRate: 0
+ZombieDropRate: 0
+SkeletonDropRate: 0
+CreeperDropRate: 0
+ZombiePigmanDropRate: 0
+IronGolemDropRate: 0
+BlazeDropRate: 0
+MobDropRate: 0.01
+
+##Starter Shard Rates
+StarterFarmShardDropRate: 0.01 #For wheat and potatoes only.
+StarterMineShardDropRate: 0.01 #For cobblestone and mossy cobblestone only.
+
+## Level Requirements ##
+LevelZero:
+  Money: 0
+  Mine_Shard: 0
+  Mob_Shard: 0
+  Farm_Shard: 0
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelOne:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelTwo:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelThree:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelFour:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelFive:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelSix:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelSeven:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelEight:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelNine:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelTen:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelEleven:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelTwelve:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelThirteen:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelFourteen:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+LevelFifteen:
+  Money: 69
+  Mine_Shard: 3
+  Mob_Shard: 3
+  Farm_Shard: 3
+  Event_Shard: 0
+  Mob_Fragment: 0
+  Mine_Fragment: 0
+  Farm_Fragment: 0
+  Event_Fragment: 0
+  Starter_Farm_Shard: 0
+  Starter_Mine_Shard: 0
+  Starter_Mob_Shard: 0
+
+#Level descriptions
+levelOneLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTwoLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelThreeLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFourLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFiveLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelSixLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelSevenLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelEightLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelNineLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTenLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelElevenLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTwelveLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelThirteenLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFourteenLore:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFifteenLore:
+  - "First Line"
+  - "Second Line"
+  - "Third Line"
+
+
+unlock-key: ""
+
+
+# Made by EvilTerabite for CyonMC #
+
+
+
+
+
+
+
+
+
+
+
+

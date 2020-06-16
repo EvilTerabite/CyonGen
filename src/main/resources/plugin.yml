@@ -1,0 +1,40 @@
+name: CyonGen
+version: ${project.version}
+main: me.evilterabite.cyongen.CyonGen
+api-version: 1.13
+authors: [evilterabite]
+description: custom generator for CyonMC
+commands:
+  giveGenerator:
+    description: Gives the player a cobblestone generator.
+    usage: /<command>
+    aliases: [givegen]
+  shardcraft:
+    description: Crafts different shards.
+    usage: /shardcraft (mining, mob, farming)
+    aliases: [shc]
+  shardcraftGUI:
+    description: opens up the GUI.
+  rankup:
+    description: allows you to rankup to the next rank.
+    usage: /<command>
+    aliases: [ru, ranku]
+  levelsGUI:
+    description: pulls up the rankup GUI
+    usage: /<command>
+    aliases: [unlocks]
+  giveshard:
+    description: gives a shard to the player.
+    usage: /<command>
+  equalizePlayers:
+    description: equalizes all players on islands.
+  cyonGenReload:
+    description: reloads the plugin.
+  CyonDiscordTest:
+    description: sends the test message to the log channel.
+  CyonInfo:
+    description: sends info to the player
+    aliases: [cyontp]
+
+depend: [FabledSkyBlock, LuckPerms]
+
