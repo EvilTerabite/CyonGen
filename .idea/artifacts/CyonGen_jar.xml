@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CyonGen:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CyonGen_jar</output-path>
+    <root id="archive" name="CyonGen.jar">
+      <element id="module-output" name="CyonGen" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/songoda/skyblock/2.2.13/skyblock-2.2.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sk89q/worldedit-bukkit/7.1.0/worldedit-bukkit-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/songoda/SongodaCore/2.3.37/SongodaCore-2.3.37.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/be/maximvdw/MVdWPlaceholderAPI/2.1.1-SNAPSHOT/MVdWPlaceholderAPI-2.1.1-20171120.102857-2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

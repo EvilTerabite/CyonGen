@@ -39,7 +39,8 @@ public class ripeCropDrops implements Listener {
                         World bWorld = b.getWorld();
                         Collection<ItemStack> bDrops = b.getDrops();
                         ItemStack farmFragment = customItems.getFarmFragment(1);
-                        bDrops.add(farmFragment);
+                        bDrops.clear();
+                        bWorld.dropItemNaturally(bLoc, farmFragment);
                     }
                 }
             }
@@ -50,7 +51,8 @@ public class ripeCropDrops implements Listener {
                         World bWorld = b.getWorld();
                         Collection<ItemStack> bDrops = b.getDrops();
                         ItemStack starterFarmShard = customItems.getStarterFarmShard(1);
-                        bDrops.add(starterFarmShard);
+                        bDrops.clear();
+                        bWorld.dropItemNaturally(bLoc, starterFarmShard);
                     }
                 }
             }
