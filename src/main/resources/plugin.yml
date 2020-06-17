@@ -22,7 +22,7 @@ commands:
   levelsGUI:
     description: pulls up the rankup GUI
     usage: /<command>
-    aliases: [unlocks]
+    aliases: [levels, level, lvl]
   giveshard:
     description: gives a shard to the player.
     usage: /<command>
@@ -35,6 +35,8 @@ commands:
   CyonInfo:
     description: sends info to the player
     aliases: [cyontp]
+  Unlocks:
+    description: opens unlocks gui
 
 depend: [FabledSkyBlock, LuckPerms]
 

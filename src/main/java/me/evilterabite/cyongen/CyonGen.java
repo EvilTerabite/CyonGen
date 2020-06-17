@@ -12,6 +12,7 @@ import me.evilterabite.cyongen.gui.levels.inventoryPermissions;
 import me.evilterabite.cyongen.gui.levels.levelsGUI;
 import me.evilterabite.cyongen.gui.rankup.rankupPermissions;
 import me.evilterabite.cyongen.gui.shardcraft.shardcraftRecipies;
+import me.evilterabite.cyongen.gui.unlocks.unlocksGUI;
 import me.evilterabite.cyongen.util.logChannel;
 import me.evilterabite.cyongen.util.permissionutil.equalize;
 import net.milkbowl.vault.chat.Chat;
@@ -62,6 +63,7 @@ public final class CyonGen extends JavaPlugin {
         pm.registerEvents(new cropDrops(), this);
         pm.registerEvents(new ripeCropDrops(), this);
         pm.registerEvents(new MobDrops(), this);
+        pm.registerEvents(new unlocksGUI(), this);
 
         //Commands
         getCommand("shardCraft").setExecutor(new shardcraft());
@@ -72,6 +74,7 @@ public final class CyonGen extends JavaPlugin {
         getCommand("cyonGenReload").setExecutor(new cyonGenReload());
         getCommand("CyonDiscordTest").setExecutor(new CyonDiscordTest());
         getCommand("CyonInfo").setExecutor(new CyonInfo());
+        getCommand("unlocks").setExecutor(new unlocks());
 
 
         //equalizeScheduler

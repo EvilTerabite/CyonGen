@@ -368,6 +368,83 @@ levelFifteenLore:
   - "First Line"
   - "Second Line"
   - "Third Line"
+    
+    
+#Unlocks GUI
+levelOneUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTwoUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelThreeUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFourUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFiveUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelSixUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelSevenUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelEightUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelNineUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTenUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelElevenUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelTwelveUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelThirteenUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFourteenUnlocks:
+  - "First line"
+  - "Second line"
+  - "Third line"
+
+levelFifteenUnlocks:
+  - "First Line"
+  - "Second Line"
+  - "Third Line"
 
 
 unlock-key: ""
