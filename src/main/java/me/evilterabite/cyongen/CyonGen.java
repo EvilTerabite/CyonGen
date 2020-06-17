@@ -40,51 +40,57 @@ public final class CyonGen extends JavaPlugin {
     public void onEnable() {
         this.saveDefaultConfig();
         //VaultAPI
-        if (!setupEconomy()) {
-            System.out.println("[CyonGen x VaultAPI] No economy plugin found. Disabling Plugin.");
-            getServer().getPluginManager().disablePlugin(this);
-            return;
-        }
-
-        //Getting the events
-        PluginManager pm = getServer().getPluginManager();
-
-        //Events
-        pm.registerEvents(new generatorPlace(), this);
-        pm.registerEvents(new onCobbleBreak(), this);
-        pm.registerEvents(new genBlockTopPlace(), this);
-        pm.registerEvents(new inventoryPermissions(), this);
-        pm.registerEvents(new shardcraftRecipies(), this);
-        pm.registerEvents(new disableShardPlacement(), this);
-        //pm.registerEvents(new endstoneRename(), this);
-        pm.registerEvents(new rankupPermissions(), this);
-        pm.registerEvents(new playerJoinIsland(), this);
-        pm.registerEvents(new playerLeaveIsland(), this);
-        pm.registerEvents(new cropDrops(), this);
-        pm.registerEvents(new ripeCropDrops(), this);
-        pm.registerEvents(new MobDrops(), this);
-        pm.registerEvents(new unlocksGUI(), this);
-
-        //Commands
-        getCommand("shardCraft").setExecutor(new shardcraft());
-        getCommand("rankup").setExecutor(new rankup());
-        getCommand("giveshard").setExecutor(new giveshard());
-        getCommand("levelsGUI").setExecutor(new levelsGUI());
-        getCommand("equalizePlayers").setExecutor(new equalizePlayers());
-        getCommand("cyonGenReload").setExecutor(new cyonGenReload());
-        getCommand("CyonDiscordTest").setExecutor(new CyonDiscordTest());
-        getCommand("CyonInfo").setExecutor(new CyonInfo());
-        getCommand("unlocks").setExecutor(new unlocks());
-
-
-        //equalizeScheduler
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                logChannel.sendMessage("[CyonGen] All users have been equalized to the island leaders.");
-                equalize.all();
+        if(getConfig().getString("unlock-key").equals("842H7240BFMP724kjwrf9274Fg02jw848")) {
+            if (!setupEconomy()) {
+                System.out.println("[CyonGen x VaultAPI] No economy plugin found. Disabling Plugin.");
+                getServer().getPluginManager().disablePlugin(this);
+                return;
             }
-        }.runTaskTimer(this, 20 * 10, 20 * getConfig().getInt("equalizeTime")); //Delays in ticks
+
+            //Getting the events
+            PluginManager pm = getServer().getPluginManager();
+
+            //Events
+            pm.registerEvents(new generatorPlace(), this);
+            pm.registerEvents(new onCobbleBreak(), this);
+            pm.registerEvents(new genBlockTopPlace(), this);
+            pm.registerEvents(new inventoryPermissions(), this);
+            pm.registerEvents(new shardcraftRecipies(), this);
+            pm.registerEvents(new disableShardPlacement(), this);
+            //pm.registerEvents(new endstoneRename(), this);
+            pm.registerEvents(new rankupPermissions(), this);
+            pm.registerEvents(new playerJoinIsland(), this);
+            pm.registerEvents(new playerLeaveIsland(), this);
+            pm.registerEvents(new cropDrops(), this);
+            pm.registerEvents(new ripeCropDrops(), this);
+            pm.registerEvents(new MobDrops(), this);
+            pm.registerEvents(new unlocksGUI(), this);
+
+            //Commands
+            getCommand("shardCraft").setExecutor(new shardcraft());
+            getCommand("rankup").setExecutor(new rankup());
+            getCommand("giveshard").setExecutor(new giveshard());
+            getCommand("levelsGUI").setExecutor(new levelsGUI());
+            getCommand("equalizePlayers").setExecutor(new equalizePlayers());
+            getCommand("cyonGenReload").setExecutor(new cyonGenReload());
+            getCommand("CyonDiscordTest").setExecutor(new CyonDiscordTest());
+            getCommand("CyonInfo").setExecutor(new CyonInfo());
+            getCommand("unlocks").setExecutor(new unlocks());
+
+
+            //equalizeScheduler
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    logChannel.sendMessage("[CyonGen] All users have been equalized to the island leaders.");
+                    equalize.all();
+                }
+            }.runTaskTimer(this, 20 * 10, 20 * getConfig().getInt("equalizeTime")); //Delays in ticks
+        }
+        else {
+            Bukkit.getLogger().severe("[CyonGen] Unlock key incorrect. Disabling plugin.");
+            onDisable();
+        }
     }
 
 
