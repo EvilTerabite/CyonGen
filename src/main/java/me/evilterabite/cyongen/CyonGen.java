@@ -40,7 +40,7 @@ public final class CyonGen extends JavaPlugin {
     public void onEnable() {
         this.saveDefaultConfig();
         //VaultAPI
-        if(getConfig().getString("unlock-key").equals("842H7240BFMP724kjwrf9274Fg02jw848")) {
+        if(getConfig().getString("unlock-key").equals("[REDACTED UNLOCK KEY]")) {
             if (!setupEconomy()) {
                 System.out.println("[CyonGen x VaultAPI] No economy plugin found. Disabling Plugin.");
                 getServer().getPluginManager().disablePlugin(this);
