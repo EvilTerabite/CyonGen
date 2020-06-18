@@ -56,6 +56,10 @@ public class rates {
             return rate;
         }
 
+        else if(b.getType() == MOSSY_COBBLESTONE) {
+            return config.getDouble("MossyCobblestoneDropRate");
+        }
+
         else {
             System.out.println("CyonGen Exception: Block broken was not in the verified block list.");
             System.out.println("Don't worry Jeremy has logged this error! Still let him know about it.");
@@ -175,26 +179,6 @@ public class rates {
             return config.getDouble("MobDropRate");
         }
     }
-
-
-
-
-    public static double getStarterRates(Block b){
-        FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
-        if(b.getType() == WHEAT || b.getType() == Material.POTATOES) {
-            return config.getDouble("StarterFarmShardDropRate");
-        }
-        if(b.getType() == MOSSY_COBBLESTONE || b.getType() == COBBLESTONE) {
-            return config.getDouble("StarterMineShardDropRate");
-        }
-
-        else {
-            logChannel.sendMessage("@Owner @CyonDev Unable to find block in starter block rates, this is a bug. Returned 0");
-            return 0;
-        }
-    }
-
-
 
     public static void getBlockRates(Player p, WeightedRandomBag<Material> genBlocks) {
         if(p.hasPermission("group.levelone")) {

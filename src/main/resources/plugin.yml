@@ -35,7 +35,7 @@ commands:
   CyonInfo:
     description: sends info to the player
     aliases: [cyontp]
-  Unlocks:
+  unlocks:
     description: opens unlocks gui
 
 depend: [FabledSkyBlock, LuckPerms]

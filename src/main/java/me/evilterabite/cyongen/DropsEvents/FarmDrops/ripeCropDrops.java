@@ -45,7 +45,7 @@ public class ripeCropDrops implements Listener {
                 }
             }
             else {
-                if(Math.random() < rates.getStarterRates(b)) {
+                if(Math.random() < rates.getFarmFragmentRates(b)) {
                     if (itemCreator.isFullyGrownDep(b)) {
                         Location bLoc = b.getLocation();
                         World bWorld = b.getWorld();

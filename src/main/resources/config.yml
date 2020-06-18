@@ -37,6 +37,7 @@ LapisDropRate: 0.08
 GoldDropRate: 0.1
 DiamondDropRate: 0.1
 EmeraldDropRate: 0.1
+MossyCobbleDropRate: 0.1
 
 ##Farm Shard Drop Rates
 WheatDropRate: 0.01
@@ -65,8 +66,9 @@ BlazeDropRate: 0
 MobDropRate: 0.01
 
 ##Starter Shard Rates
-StarterFarmShardDropRate: 0.01 #For wheat and potatoes only.
-StarterMineShardDropRate: 0.01 #For cobblestone and mossy cobblestone only.
+#####DEPRECATED#####
+#StarterFarmShardDropRate: 0.01 #For wheat and potatoes only.
+#StarterMineShardDropRate: 0.01 #For cobblestone and mossy cobblestone only.
 
 ## Level Requirements ##
 LevelZero:

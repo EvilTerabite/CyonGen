@@ -46,7 +46,6 @@ public final class CyonGen extends JavaPlugin {
                 getServer().getPluginManager().disablePlugin(this);
                 return;
             }
-
             //Getting the events
             PluginManager pm = getServer().getPluginManager();
 
