@@ -18,7 +18,7 @@ import java.util.List;
 public class unlocksGUI implements Listener {
 
     public static void open(Player player){
-        Inventory inv = Bukkit.createInventory(null, 9, ChatColor.GOLD + "Unlocks");
+        Inventory inv = Bukkit.createInventory(null, 27, ChatColor.GOLD + "Unlocks");
 
         Configuration config = CyonGen.getPlugin(CyonGen.class).getConfig();
         List<String> levelOneLore = config.getStringList("levelOneUnlocks");
@@ -58,16 +58,8 @@ public class unlocksGUI implements Listener {
 
     @EventHandler
     void onInvClick(InventoryClickEvent e) {
-        List<HumanEntity> humanEntities = e.getViewers();
-        for(HumanEntity humanEntity : humanEntities) {
-            if(humanEntity instanceof Player) {
-                Player p = (Player) humanEntity;
-                if(!p.hasPermission("cyon.admin")) {
-                    if (e.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "Unlocks")) {
-                        e.setCancelled(true);
-                    }
-                }
-            }
+        if (e.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "Unlocks")) {
+            e.setCancelled(true);
         }
     }
 }

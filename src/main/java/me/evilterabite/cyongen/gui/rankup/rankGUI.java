@@ -32,10 +32,16 @@ public class rankGUI {
         int eventFragmentAmount = config.getInt(level + ".Event_Fragment");
         int starterFarmAmount = config.getInt(level + ".Starter_Farm_Shard");
         int starterMineAmount = config.getInt(level + ".Starter_Mine_Shard");
-        int starterMobAmount = config.getInt(level + ".Starter_Mob_Shard");
-
-
-
+        itemReqLore.add("Mine Shards: " + mineAmount);
+        itemReqLore.add("Farm Shards: " + farmAmount);
+        itemReqLore.add("Mob Shards: " + mobAmount);
+        itemReqLore.add("Event Shards: " + eventAmount);
+        itemReqLore.add("Farm Fragments: " + farmFragmentAmount);
+        itemReqLore.add("Mob Fragments: " + mobFragmentAmount);
+        itemReqLore.add("Mine Fragments: " + mineFragmentAmount);
+        itemReqLore.add("Event Fragments: " + eventFragmentAmount);
+        itemReqLore.add("Starter Farm Shards: " + starterFarmAmount);
+        itemReqLore.add("Starter Mine Shards: " + starterMineAmount);
         inv.setItem(0, itemCreator.createItem(Material.BLACK_STAINED_GLASS_PANE, "Nice try! you cannot click this!", shardLore));
         inv.setItem(1, itemCreator.createItem(Material.RED_CONCRETE, "CANCEL", shardLore));
         inv.setItem(2, itemCreator.createItem(Material.RED_CONCRETE, "CANCEL", shardLore));

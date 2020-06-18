@@ -27,7 +27,7 @@ public class onCobbleBreak implements Listener {
         rates.getBlockRates(p, genBlocks);
         if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
             double random = Math.random();
-            if(!p.hasPermission("group.levelone") || !p.hasPermission("group.leveltwo") || !p.hasPermission("group.levelthree")) {
+            if(!p.hasPermission("group.default") || !p.hasPermission("group.levelone") || !p.hasPermission("group.leveltwo") || !p.hasPermission("group.levelthree")) {
                 if (random < rates.getMineFragmentRate(b)) {
                     ItemStack fragment = customItems.getMineFragment(1);
                     p.sendMessage(ChatColor.AQUA + "You got a mining fragment!");
