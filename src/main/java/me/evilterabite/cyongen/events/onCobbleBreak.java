@@ -27,42 +27,40 @@ public class onCobbleBreak implements Listener {
         rates.getBlockRates(p, genBlocks);
         if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
             double random = Math.random();
-            if(!p.hasPermission("group.default") || !p.hasPermission("group.levelone") || !p.hasPermission("group.leveltwo") || !p.hasPermission("group.levelthree")) {
-                if (random < rates.getMineFragmentRate(b)) {
+            double rate = rates.getMineFragmentRate(b);
+            if(rate != 101) {
+                if (random < rate) {
                     ItemStack fragment = customItems.getMineFragment(1);
                     p.sendMessage(ChatColor.AQUA + "You got a mining fragment!");
                     bWorld.dropItemNaturally(bLoc, fragment);
+                    generateBlock(genBlocks, b, cyongen, p);
                 }
-                Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {
-                    @Override
-                    public void run() {
-                        Material gen = genBlocks.getRandom();
-                        if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
-                            b.setType(gen);
-                        } else {
-                            p.sendMessage("[CyonGen] Could not find Mining Node, de-spawned generator block!");
-                        }
-                    }
-                }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
             }
             else {
-                if (random < rates.getMineFragmentRate(b)) {
-                    ItemStack fragment = customItems.getStarterMineShard(1);
-                    p.sendMessage(ChatColor.AQUA + "You got a mining fragment!");
-                    bWorld.dropItemNaturally(bLoc, fragment);
+                if(random < cyongen.getConfig().getDouble("StarterMineDropRate")) {
+                    ItemStack stFragment = customItems.getStarterMineShard(1);
+                    p.sendMessage(ChatColor.YELLOW + "You got a starter mining shard!");
+                    bWorld.dropItemNaturally(bLoc, stFragment);
+                    generateBlock(genBlocks, b, cyongen, p);
                 }
-                Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {
-                    @Override
-                    public void run() {
-                        Material gen = genBlocks.getRandom();
-                        if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
-                            b.setType(gen);
-                        } else {
-                            p.sendMessage("[CyonGen] Could not find Mining Node, de-spawned generator block!");
-                        }
-                    }
-                }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
             }
         }
+    }
+
+
+
+
+    static void generateBlock(WeightedRandomBag<Material> genBlocks, Block b, Plugin cyongen, Player p) {
+        Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {
+            @Override
+            public void run() {
+                Material gen = genBlocks.getRandom();
+                if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
+                    b.setType(gen);
+                } else {
+                    p.sendMessage("[CyonGen] Could not find Mining Node, de-spawned generator block!");
+                }
+            }
+        }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
     }
 }

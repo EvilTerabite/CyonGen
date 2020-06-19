@@ -57,7 +57,7 @@ public class rates {
         }
 
         else if(b.getType() == MOSSY_COBBLESTONE) {
-            return config.getDouble("MossyCobblestoneDropRate");
+            return 101;
         }
 
         else {
@@ -83,7 +83,7 @@ public class rates {
         Configuration config = cyongen.getConfig();
         if(mat == Material.WHEAT) {
             double rate = config.getDouble("WheatDropRate");
-            return rate;
+            return 101;
         }
         else if(mat == Material.CARROTS) {
             double rate = config.getDouble("CarrotDropRate");
