@@ -91,7 +91,7 @@ public class rates {
         }
         else if(mat == Material.POTATOES) {
             double rate = config.getDouble("PotatoDropRate");
-            return rate;
+            return 101;
         }
         else if(mat == Material.PUMPKIN) {
             double rate = config.getDouble("PumpkinDropRate");

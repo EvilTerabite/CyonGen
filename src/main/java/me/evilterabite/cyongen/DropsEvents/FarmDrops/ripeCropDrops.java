@@ -51,30 +51,14 @@ public class ripeCropDrops implements Listener {
             else {
                 FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
                 if(starterCrops.contains(b.getType())) {
-                    if(b.getType() == WHEAT) {
-                        if (Math.random() < config.getDouble("SWheatDropRate")) {
-                            if (itemCreator.isFullyGrownDep(b)) {
-                                Location bLoc = b.getLocation();
-                                World bWorld = b.getWorld();
-                                Collection<ItemStack> bDrops = b.getDrops();
-                                ItemStack farmFragment = customItems.getFarmFragment(1);
-                                bDrops.clear();
-                                bWorld.dropItemNaturally(bLoc, farmFragment);
-                            }
-                        }
-                    }
-                }
-                if(starterCrops.contains(b.getType())) {
-                    if (b.getType() == POTATOES) {
-                        if (Math.random() < config.getDouble("SPotatoDropRate")) {
-                            if (itemCreator.isFullyGrownDep(b)) {
-                                Location bLoc = b.getLocation();
-                                World bWorld = b.getWorld();
-                                Collection<ItemStack> bDrops = b.getDrops();
-                                ItemStack farmFragment = customItems.getFarmFragment(1);
-                                bDrops.clear();
-                                bWorld.dropItemNaturally(bLoc, farmFragment);
-                            }
+                    if (Math.random() < config.getDouble("SFarmingDropRate")) {
+                        if (itemCreator.isFullyGrownDep(b)) {
+                            Location bLoc = b.getLocation();
+                            World bWorld = b.getWorld();
+                            Collection<ItemStack> bDrops = b.getDrops();
+                            ItemStack farmFragment = customItems.getStarterFarmShard(1);
+                            bDrops.clear();
+                            bWorld.dropItemNaturally(bLoc, farmFragment);
                         }
                     }
                 }
