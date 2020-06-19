@@ -33,7 +33,17 @@ public class onCobbleBreak implements Listener {
                     ItemStack fragment = customItems.getMineFragment(1);
                     p.sendMessage(ChatColor.AQUA + "You got a mining fragment!");
                     bWorld.dropItemNaturally(bLoc, fragment);
-                    generateBlock(genBlocks, b, cyongen, p);
+                    Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {
+                        @Override
+                        public void run() {
+                            Material gen = genBlocks.getRandom();
+                            if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
+                                b.setType(gen);
+                            } else {
+                                p.sendMessage("[CyonGen] Could not find Mining Node, de-spawned generator block!");
+                            }
+                        }
+                    }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
                 }
             }
             else {
@@ -41,7 +51,17 @@ public class onCobbleBreak implements Listener {
                     ItemStack stFragment = customItems.getStarterMineShard(1);
                     p.sendMessage(ChatColor.YELLOW + "You got a starter mining shard!");
                     bWorld.dropItemNaturally(bLoc, stFragment);
-                    generateBlock(genBlocks, b, cyongen, p);
+                    Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {
+                        @Override
+                        public void run() {
+                            Material gen = genBlocks.getRandom();
+                            if (b.getRelative(BlockFace.DOWN).getType() == Material.END_STONE) {
+                                b.setType(gen);
+                            } else {
+                                p.sendMessage("[CyonGen] Could not find Mining Node, de-spawned generator block!");
+                            }
+                        }
+                    }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
                 }
             }
         }

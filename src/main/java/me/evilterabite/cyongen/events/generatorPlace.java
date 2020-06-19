@@ -1,6 +1,7 @@
 package me.evilterabite.cyongen.events;
 
 import me.evilterabite.cyongen.CyonGen;
+import me.evilterabite.cyongen.util.messages;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -21,7 +22,7 @@ public class generatorPlace implements Listener {
             Block cobbleGen = b.getRelative(BlockFace.UP);
             if (cobbleGen.getType() == Material.AIR) {
                 cobbleGen.setType(Material.BEDROCK);
-                p.sendMessage("[CyonGen] Generator placed!");
+                messages.get("generatorPlaced", p);
                 Plugin cyongen = CyonGen.getPlugin(CyonGen.class);
                 p.sendMessage("[CyonGen] Your generator will be available in " + cyongen.getConfig().getInt("GeneratorCooldown") + " seconds.");
                 Bukkit.getServer().getScheduler().runTaskLater(cyongen, new Runnable() {

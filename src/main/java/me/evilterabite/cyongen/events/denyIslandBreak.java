@@ -4,6 +4,8 @@ import com.songoda.skyblock.api.SkyBlockAPI;
 import com.songoda.skyblock.api.event.player.PlayerIslandEnterEvent;
 import com.songoda.skyblock.api.island.Island;
 import com.songoda.skyblock.api.island.IslandManager;
+import me.evilterabite.cyongen.util.messages;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,6 +24,7 @@ public class denyIslandBreak implements Listener {
         for(UUID playerUUID : visitors) {
             if(player.getUniqueId() == playerUUID) {
                 e.setCancelled(true);
+                messages.get("denyBreak", player);
             }
         }
     }

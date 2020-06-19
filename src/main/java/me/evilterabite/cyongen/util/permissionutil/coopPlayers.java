@@ -25,7 +25,6 @@ public class coopPlayers implements Listener {
                             "lp user %username% promote islevels")
                             .replace("%username%", coopPlayer.getName())
                     );
-                    coopPlayer.sendMessage(ChatColor.GREEN + "You have been promoted!");
                 }
             }
         }
@@ -55,7 +54,6 @@ public class coopPlayers implements Listener {
                                             .replace("%username%", coopPlayer.getName())
                                             .replace("%groupName%", islandOwnerGroup)
                                     );
-                                    coopPlayer.sendMessage(ChatColor.GREEN + "You have been promoted!");
                                 }
                             } else {
                                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), (

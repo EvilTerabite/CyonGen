@@ -1,5 +1,6 @@
 package me.evilterabite.cyongen.events.fabledskyblockevents;
 
+import com.songoda.skyblock.api.event.island.IslandCreateEvent;
 import com.songoda.skyblock.api.event.player.PlayerIslandLeaveEvent;
 import net.luckperms.api.LuckPerms;
 import org.bukkit.Bukkit;
@@ -11,9 +12,9 @@ import org.bukkit.event.Listener;
 import java.util.HashSet;
 import java.util.Set;
 
-public class playerLeaveIsland implements Listener {
+public class playerCreateIsland implements Listener {
     @EventHandler
-    void onIsLeave(PlayerIslandLeaveEvent e) {
+    void onIsLeave(IslandCreateEvent e) {
         Player p = e.getPlayer();
         Set<String> groups = new HashSet<>();
         Set<String> ranks = new HashSet<>();

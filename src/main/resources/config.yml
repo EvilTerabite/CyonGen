@@ -11,6 +11,9 @@ equalizeTime: 60
 #Player Messages
 prefix: "&7[&aCyonGen&7]&r "
 denyPlaceOnGen: "&cYou cannot place blocks on the generator."
+mobDropMsg: "&eYou got a mob fragment!"
+denyBreak: "&cYou cannot break that block."
+generatorPlaced: "&aYour generator has been placed! Please wait for the generator to be available."
 
 #Discord Log Channel
 discordLogChannel: admin-chat

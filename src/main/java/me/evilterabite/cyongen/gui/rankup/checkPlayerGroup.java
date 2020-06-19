@@ -36,7 +36,6 @@ public class checkPlayerGroup {
         } else if (player.hasPermission("group.levelfifteen")) {
             player.sendMessage("You are already at the highest level.");
         } else {
-            player.sendMessage("[CyonGen] You started your skyblock journey at Level 1! CyonMC wishes you luck!");
             promotionSequence.promote(player, "LevelZero", "1");
         }
     }

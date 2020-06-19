@@ -8,7 +8,7 @@ import me.evilterabite.cyongen.events.*;
 import me.evilterabite.cyongen.DropsEvents.MobDrops;
 import me.evilterabite.cyongen.events.fabledskyblockevents.playerDeleteIsland;
 import me.evilterabite.cyongen.events.fabledskyblockevents.playerJoinIsland;
-import me.evilterabite.cyongen.events.fabledskyblockevents.playerLeaveIsland;
+import me.evilterabite.cyongen.events.fabledskyblockevents.playerCreateIsland;
 import me.evilterabite.cyongen.gui.levels.inventoryPermissions;
 import me.evilterabite.cyongen.gui.levels.levelsGUI;
 import me.evilterabite.cyongen.gui.rankup.rankupPermissions;
@@ -59,7 +59,7 @@ public final class CyonGen extends JavaPlugin {
         //pm.registerEvents(new endstoneRename(), this);
         pm.registerEvents(new rankupPermissions(), this);
         pm.registerEvents(new playerJoinIsland(), this);
-        pm.registerEvents(new playerLeaveIsland(), this);
+        pm.registerEvents(new playerCreateIsland(), this);
         pm.registerEvents(new cropDrops(), this);
         pm.registerEvents(new ripeCropDrops(), this);
         pm.registerEvents(new MobDrops(), this);

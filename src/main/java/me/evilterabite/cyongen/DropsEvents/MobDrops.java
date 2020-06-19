@@ -1,6 +1,7 @@
 package me.evilterabite.cyongen.DropsEvents;
 
 import me.evilterabite.cyongen.util.items.customItems;
+import me.evilterabite.cyongen.util.messages;
 import me.evilterabite.cyongen.util.rates;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -29,7 +30,7 @@ public class MobDrops implements Listener {
                 World cWorld = mob.getWorld();
                 ItemStack mobFragment = customItems.getMobFragment(1);
                 cWorld.dropItemNaturally(cLoc, mobFragment);
-                p.sendMessage(ChatColor.BLUE + "You got a mob fragment!");
+                messages.get("mobDropMsg", p);
             }
         }
     }

@@ -4,6 +4,7 @@ import me.evilterabite.cyongen.CyonGen;
 import me.evilterabite.cyongen.gui.rankup.removeItems;
 import me.evilterabite.cyongen.util.items.customItems;
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.Configuration;
@@ -59,10 +60,9 @@ public class promotionSequence {
                 removeItems.remove(pInv, starterFarmAmount, starterFarmShard);
                 removeItems.remove(pInv, starterMineAmount, starterMineShard);
                 removeItems.remove(pInv, starterMobAmount, starterMobShard);
-                if(level.equalsIgnoreCase("levelfour")) {
-                    pInv.addItem(new ItemStack(Material.CARROT));
-                }
-
+                Bukkit.broadcastMessage(ChatColor.GOLD + "Congrats to %player% they just ranked up to level %level%"
+                .replace("%player%", p.getName())
+                .replace("%level%", promoteTo));
             } else {
                 p.sendMessage(ChatColor.RED + "You do not have enough money to Rankup.");
             }
