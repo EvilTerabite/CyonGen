@@ -48,18 +48,18 @@ public class ripeCropDrops implements Listener {
                     }
                 }
             }
-            else {
-                FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
-                if(starterCrops.contains(b.getType())) {
-                    if (Math.random() < config.getDouble("SFarmingDropRate")) {
-                        if (itemCreator.isFullyGrownDep(b)) {
-                            Location bLoc = b.getLocation();
-                            World bWorld = b.getWorld();
-                            Collection<ItemStack> bDrops = b.getDrops();
-                            ItemStack farmFragment = customItems.getStarterFarmShard(1);
-                            bDrops.clear();
-                            bWorld.dropItemNaturally(bLoc, farmFragment);
-                        }
+        }
+        else {
+            FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
+            if (starterCrops.contains(b.getType())) {
+                if (Math.random() < config.getDouble("SFarmingDropRate")) {
+                    if (itemCreator.isFullyGrownDep(b)) {
+                        Location bLoc = b.getLocation();
+                        World bWorld = b.getWorld();
+                        Collection<ItemStack> bDrops = b.getDrops();
+                        ItemStack farmFragment = customItems.getStarterFarmShard(1);
+                        bDrops.clear();
+                        bWorld.dropItemNaturally(bLoc, farmFragment);
                     }
                 }
             }
