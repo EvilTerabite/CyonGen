@@ -4,6 +4,7 @@ import me.evilterabite.cyongen.CyonGen;
 import me.evilterabite.cyongen.util.items.customItems;
 import me.evilterabite.cyongen.util.itemCreator;
 import me.evilterabite.cyongen.util.rates;
+import me.evilterabite.cyongen.util.visitor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -33,32 +34,33 @@ public class ripeCropDrops implements Listener {
         ripeCrops.add(NETHER_WART);
         ripeCrops.add(CARROTS);
         ripeCrops.add(BEETROOTS);
-        if (ripeCrops.contains(b.getType())) {
-            double rate = rates.getFarmFragmentRates(b);
-            if(rate != 101) {
-                if (Math.random() < rate) {
-                    if (itemCreator.isFullyGrownDep(b)) {
-                        Location bLoc = b.getLocation();
-                        World bWorld = b.getWorld();
-                        Collection<ItemStack> bDrops = b.getDrops();
-                        ItemStack farmFragment = customItems.getFarmFragment(1);
-                        bDrops.clear();
-                        bWorld.dropItemNaturally(bLoc, farmFragment);
+        if(!visitor.check(p)) {
+            if (ripeCrops.contains(b.getType())) {
+                double rate = rates.getFarmFragmentRates(b);
+                if (rate != 101) {
+                    if (Math.random() < rate) {
+                        if (itemCreator.isFullyGrownDep(b)) {
+                            Location bLoc = b.getLocation();
+                            World bWorld = b.getWorld();
+                            Collection<ItemStack> bDrops = b.getDrops();
+                            ItemStack farmFragment = customItems.getFarmFragment(1);
+                            bDrops.clear();
+                            bWorld.dropItemNaturally(bLoc, farmFragment);
+                        }
                     }
                 }
-            }
-        }
-        else {
-            FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
-            if (starterCrops.contains(b.getType())) {
-                if (Math.random() < config.getDouble("SFarmingDropRate")) {
-                    if (itemCreator.isFullyGrownDep(b)) {
-                        Location bLoc = b.getLocation();
-                        World bWorld = b.getWorld();
-                        Collection<ItemStack> bDrops = b.getDrops();
-                        ItemStack farmFragment = customItems.getStarterFarmShard(1);
-                        bDrops.clear();
-                        bWorld.dropItemNaturally(bLoc, farmFragment);
+            } else {
+                FileConfiguration config = CyonGen.getPlugin(CyonGen.class).getConfig();
+                if (starterCrops.contains(b.getType())) {
+                    if (Math.random() < config.getDouble("SFarmingDropRate")) {
+                        if (itemCreator.isFullyGrownDep(b)) {
+                            Location bLoc = b.getLocation();
+                            World bWorld = b.getWorld();
+                            Collection<ItemStack> bDrops = b.getDrops();
+                            ItemStack farmFragment = customItems.getStarterFarmShard(1);
+                            bDrops.clear();
+                            bWorld.dropItemNaturally(bLoc, farmFragment);
+                        }
                     }
                 }
             }

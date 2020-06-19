@@ -24,6 +24,7 @@ public class denyIslandBreak implements Listener {
         for(UUID playerUUID : visitors) {
             if(player.getUniqueId() == playerUUID) {
                 e.setCancelled(true);
+                e.getBlock().getDrops().clear();
                 messages.get("denyBreak", player);
             }
         }
