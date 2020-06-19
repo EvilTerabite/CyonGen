@@ -65,6 +65,7 @@ public final class CyonGen extends JavaPlugin {
         pm.registerEvents(new MobDrops(), this);
         pm.registerEvents(new unlocksGUI(), this);
         pm.registerEvents(new playerDeleteIsland(), this);
+        pm.registerEvents(new denyIslandBreak(), this);
 
         //Commands
         getCommand("shardCraft").setExecutor(new shardcraft());

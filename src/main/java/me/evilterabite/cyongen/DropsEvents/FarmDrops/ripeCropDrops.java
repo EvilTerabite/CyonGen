@@ -33,7 +33,6 @@ public class ripeCropDrops implements Listener {
         ripeCrops.add(NETHER_WART);
         ripeCrops.add(CARROTS);
         ripeCrops.add(BEETROOTS);
-
         if (ripeCrops.contains(b.getType())) {
             double rate = rates.getFarmFragmentRates(b);
             if(rate != 101) {
