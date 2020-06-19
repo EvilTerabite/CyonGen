@@ -45,6 +45,9 @@ public class onCobbleBreak implements Listener {
                         }
                     }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
                 }
+                else {
+                    generateBlock(genBlocks, b, cyongen, p);
+                }
             }
             else {
                 if(random < cyongen.getConfig().getDouble("StarterMineDropRate")) {
@@ -62,6 +65,10 @@ public class onCobbleBreak implements Listener {
                             }
                         }
                     }, 20 * cyongen.getConfig().getInt("CobblestoneGenerationTime"));
+                }
+
+                else {
+                    generateBlock(genBlocks, b, cyongen, p);
                 }
             }
         }
